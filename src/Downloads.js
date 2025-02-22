@@ -55,7 +55,7 @@ const DownloadPage = () => {
         const fetchMCVersions = async () => {
             try {
                 setLoading(prev => ({...prev, mc: true}));
-                const res = await fetch('https://files.hypertention.cn/v1/files/arclight/minecraft', {redirect: 'follow'});
+                const res = await fetch('https://files.hypoglycemia.icu/v1/files/arclight/minecraft', {redirect: 'follow'});
                 const data = await res.json();
                 const mcVersions = data.files.map(f => f.name).sort(function (a, b) {
                     const aName = a.split(".").length < 3 ? a + ".0" : a;
@@ -80,7 +80,7 @@ const DownloadPage = () => {
             try {
                 setLoading(prev => ({...prev, loaders: true}));
                 // 获取加载器列表
-                const loaderRes = await fetch(`https://files.hypertention.cn/v1/files/arclight/minecraft/${selectedMC}/loaders`, {redirect: 'follow'});
+                const loaderRes = await fetch(`https://files.hypoglycemia.icu/v1/files/arclight/minecraft/${selectedMC}/loaders`, {redirect: 'follow'});
                 const loaderData = await loaderRes.json();
                 setLoaders(loaderData.files.map(f => f.name));
             } catch (err) {
@@ -104,7 +104,7 @@ const DownloadPage = () => {
                 setLoading(prev => ({...prev, versions: true}));
 
                 // 获取snapshot版本列表
-                const res = await fetch(`https://files.hypertention.cn/v1/files/arclight/minecraft/${selectedMC}/loaders/${selectedLoader}/versions-snapshot`, {redirect: 'follow'});
+                const res = await fetch(`https://files.hypoglycemia.icu/v1/files/arclight/minecraft/${selectedMC}/loaders/${selectedLoader}/versions-snapshot`, {redirect: 'follow'});
                 const data = await res.json();
 
                 // 处理版本数据
