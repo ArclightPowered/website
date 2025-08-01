@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://arclight.izzel.io",
   "dependencies": {
+    "@ctrl/react-adsense": "^1.8.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -14,8 +15,6 @@
     "react-scripts": "5.0.1",
     "semver": "^7.7.1",
     "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
   },
   "scripts": {
     "predeploy": "npm run build",
